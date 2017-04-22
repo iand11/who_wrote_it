@@ -1,0 +1,9 @@
+<style>form div { padding: 10px; }</style>
+
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <%= erb :'contacts/_form_fields', layout: false %>
+    <div>
+    <input type="submit" name="commit" value="Edit Contact">
+  </div>
+</form>
