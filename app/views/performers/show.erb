@@ -1,0 +1,30 @@
+<style>
+.writers_songs {
+	text-align: center
+}
+#foot{
+	height: 10%;
+}	
+</style>
+
+<div class="writers_songs">
+<h2> <%= @performer.name %> </h2>
+
+<h3>songs</h3>
+<ul style="list-style: none; padding: 0;">
+<% @performer.songs.each do |song| %>
+<li><a href="/songs/<%= song.id %>"><%= song.title %></a><br><h5>writers</h5></li>
+<% song.writers.each do |writers| %>
+	 <li> <a href="/writers/<%= writers.id %>"><%= writers.full_name %></a></li>
+	<% end %>	
+	<% end %>
+</ul>
+
+
+
+</div>
+
+<footer id="foot" class="w3-container w3-xlarge w3-padding-24">
+    <a href="/" class="w3-left w3-button w3-white">Home</a>
+    <a href="/about" class="w3-right w3-button w3-white">About</a>
+</footer>

@@ -3,4 +3,9 @@ class Song < ActiveRecord::Base
   has_many :writers, through: :song_writers
   has_many :performer_songs
   has_many :performers, through: :performer_songs
+
+  def self.song_name(user_search)
+    self.select{ |song| song.title == user_search }
+  end
+
 end
