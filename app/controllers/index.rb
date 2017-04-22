@@ -1,5 +1,5 @@
 get '/' do
-  "Hello World"
+  erb :'home'
 end
 
 #index
