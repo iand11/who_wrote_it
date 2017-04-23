@@ -5,7 +5,10 @@ class Song < ActiveRecord::Base
   has_many :performers, through: :performer_songs
 
   def self.song_name(user_search)
-    self.select{ |song| song.title == user_search }
+    song = self.find{ |song| song.title == user_search }
   end
 
+  def has_id?
+    self.id
+  end 
 end

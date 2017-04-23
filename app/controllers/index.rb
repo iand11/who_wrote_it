@@ -3,14 +3,11 @@ get '/' do
 end
 
 post '/' do
-  puts "*" * 100 
-  puts params
   @song = Song.song_name(params[:song])
-  puts @song.title
-    if @song.any?
-      redirect :'/songs/index'
+    if @song != nil 
+      redirect :"songs/#{@song.id}"
     else
-      erb :'/'
+      erb :'home'
     end 
 end 
 
