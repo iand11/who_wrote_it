@@ -8,7 +8,5 @@ class Song < ActiveRecord::Base
     song = self.find{ |song| song.title == user_search }
   end
 
-  def has_id?
-    self.id
-  end 
+
 end

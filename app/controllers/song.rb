@@ -1,4 +1,3 @@
-
 #show specific
 get '/songs/:id' do 
 	@song = Song.find(params[:id])
