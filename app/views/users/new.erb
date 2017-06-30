@@ -1,0 +1,96 @@
+
+<html>
+<style>
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+#new_user {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 18px;
+}
+
+/*img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}*/
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+<form action="/action_page.php">
+  <div class="imgcontainer" style="background-color:#f1f1f1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIjR9DQ_8aYdeqDK3o7LZiTZEebrwP1qsWsKo2sXgO3XnjUoXCfQ" height="300" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+<form id="new_user" action="/users" method="post">
+    <input type="text" name="user[first_name]" placeholder="First Name"/>
+    <input type="text" name="user[last_name]" placeholder="Last Name"/>
+    <input type="text" name="user[email]" placeholder="Email"/>
+    <input type="password" name="user[hashed_password]" placeholder="Password" />
+    <input type="submit" value="Submit" class="w3-button w3-block w3-dark-grey" />
+
+</form>    
+        
+  </div>
+
+
+</body>
+<footer class="w3-container w3-xlarge w3-padding-24">
+    <a href="/" class="w3-left w3-button w3-white">Home</a>
+    <a href="/about" class="w3-right w3-button w3-white">About</a>
+</footer>
+</html>
